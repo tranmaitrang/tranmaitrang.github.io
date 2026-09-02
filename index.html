@@ -3,29 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://tranmaitrang.github.io/">
 
-<!-- ================================================================
-     THAY USERNAME bằng tên tài khoản GitHub của bạn ở 4 dòng có
-     chữ USERNAME bên dưới, sau khi biết địa chỉ trang thật.
-     ================================================================ -->
-<link rel="canonical" href="https://USERNAME.github.io/">
-
-<meta name="description" content="Research profile of Dr. Tran Mai Trang - development and international economics: income inequality, energy transition and the resilience of the Vietnamese economy. Searchable index of publications, books and research projects.">
+<meta name="description" content="Research profile of Dr. Tran Mai Trang, lecturer at the University of Economics and Business, VNU Hanoi, and principal researcher at the Vietnam Institute of Economics - income inequality, energy transition and the resilience of the Vietnamese economy.">
 <meta name="author" content="Trần Mai Trang">
 <meta name="robots" content="index, follow">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Trần Mai Trang — Research Profile">
-<meta property="og:description" content="Research profile of Dr. Tran Mai Trang - development and international economics: income inequality, energy transition and the resilience of the Vietnamese economy. Searchable index of publications, books and research projects.">
-<meta property="og:url" content="https://USERNAME.github.io/">
-<meta property="og:image" content="https://USERNAME.github.io/og.png">
+<meta property="og:description" content="Research profile of Dr. Tran Mai Trang, lecturer at the University of Economics and Business, VNU Hanoi, and principal researcher at the Vietnam Institute of Economics - income inequality, energy transition and the resilience of the Vietnamese economy.">
+<meta property="og:url" content="https://tranmaitrang.github.io/">
+<meta property="og:image" content="https://tranmaitrang.github.io/og.png">
 <meta property="profile:first_name" content="Mai Trang">
 <meta property="profile:last_name" content="Trần">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Trần Mai Trang — Research Profile">
-<meta name="twitter:description" content="Research profile of Dr. Tran Mai Trang - development and international economics: income inequality, energy transition and the resilience of the Vietnamese economy. Searchable index of publications, books and research projects.">
-<meta name="twitter:image" content="https://USERNAME.github.io/og.png">
+<meta name="twitter:description" content="Research profile of Dr. Tran Mai Trang, lecturer at the University of Economics and Business, VNU Hanoi, and principal researcher at the Vietnam Institute of Economics - income inequality, energy transition and the resilience of the Vietnamese economy.">
+<meta name="twitter:image" content="https://tranmaitrang.github.io/og.png">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232C5A4B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23F1F2EC' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 
@@ -130,6 +125,15 @@ h1{
   font-size:13px;color:var(--muted);background:var(--surface);
 }
 .contact a:hover{border-color:var(--accent);color:var(--accent-ink)}
+.contact a.profilelink{border-color:var(--accent-soft);color:var(--accent-ink);background:var(--accent-soft)}
+.contact a.profilelink:hover{border-color:var(--accent)}
+.afflabel{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent-ink);margin:22px 0 9px;
+}
+.afflabel:first-of-type{margin-top:24px}
+.affil+.afflabel{margin-top:18px}
+
 
 /* ---------- figures strip ---------- */
 .figures{
@@ -267,6 +271,85 @@ td:first-child{font-family:"IBM Plex Mono",monospace;color:var(--faint);font-var
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
+/* ---------- portrait ---------- */
+.mast-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;margin-top:18px}
+.portrait{margin:0;flex:0 0 auto}
+.portrait img,.portrait svg{
+  display:block;width:172px;height:214px;object-fit:cover;object-position:center 22%;
+  border-radius:4px;border:1px solid var(--line);background:var(--accent-soft);
+}
+
+/* ---------- current research ---------- */
+.current{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0}
+.cur{
+  padding:20px 24px;border-left:1px solid var(--line-soft);
+}
+.cur:first-child{padding-left:0;border-left:0}
+.cur .per{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--clay);display:block;margin-bottom:8px;
+}
+.cur h3{font-size:1.1rem;margin:0 0 6px;line-height:1.3}
+.cur p{margin:0;font-size:14px;color:var(--muted)}
+.cur .who{display:block;margin-top:9px;font-size:12.5px;color:var(--faint)}
+
+/* ---------- year chart ---------- */
+.chartwrap{margin:0 0 4px}
+.chartlead{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--faint);margin:0 0 12px;
+}
+.chart{
+  display:flex;align-items:flex-end;gap:4px;height:96px;
+  padding-bottom:24px;position:relative;overflow-x:auto;
+  border-bottom:1px solid var(--line-soft);
+}
+.bar{
+  flex:1 1 0;min-width:11px;height:100%;padding:0;border:0;background:none;
+  cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;
+  position:relative;
+}
+.bar i{
+  display:block;width:100%;background:var(--accent-soft);border-radius:2px 2px 0 0;
+  transition:background .18s ease;min-height:2px;
+}
+.bar:hover i,.bar:focus-visible i{background:var(--accent)}
+.bar[aria-pressed="true"] i{background:var(--accent)}
+.bar span{
+  position:absolute;left:-6px;right:-6px;bottom:-20px;text-align:center;
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--faint);
+  font-variant-numeric:tabular-nums;
+}
+.bar[aria-pressed="true"] span{color:var(--accent-ink)}
+.bar b{
+  position:absolute;top:-4px;left:-8px;right:-8px;text-align:center;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--accent-ink);
+  opacity:0;transition:opacity .15s;font-weight:500;
+}
+.bar:hover b,.bar[aria-pressed="true"] b{opacity:1}
+.clearyear{
+  border:0;background:none;color:var(--accent-ink);cursor:pointer;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:0 0 0 10px;
+  text-decoration:underline;
+}
+
+/* ---------- motion ---------- */
+.rec{transition:border-color .2s ease}
+.rec:hover .rec-title{color:var(--accent-ink)}
+.theme,.cur{transition:border-color .25s ease}
+.theme:hover{border-left-color:var(--accent)}
+.reveal-armed .reveal{opacity:0;transform:translateY(14px)}
+.reveal-armed .reveal.in{
+  opacity:1;transform:none;
+  transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.3,1);
+}
+@media (max-width:760px){
+  .mast-grid{grid-template-columns:1fr;gap:26px}
+  .portrait img,.portrait svg{width:132px;height:164px}
+  .cur{padding:18px 0;border-left:0;border-top:1px solid var(--line-soft)}
+  .cur:first-child{padding-top:0;border-top:0}
+}
+
 /* --- standalone additions --- */
 html{color-scheme:light dark}
 body{margin:0}
@@ -287,21 +370,22 @@ img{max-width:100%}
   "@type": "Person",
   "name": "Tr\u1ea7n Mai Trang",
   "alternateName": "Tran Mai Trang",
-  "jobTitle": ["Principal Researcher", "Lecturer"],
-  "url": "https://USERNAME.github.io/",
+  "jobTitle": ["Lecturer", "Principal Researcher"],
+  "url": "https://tranmaitrang.github.io/",
   "email": "mailto:tranmaitrang@vnu.edu.vn",
+  "sameAs": ["https://scholar.google.com/citations?user=TDZL-CMAAAAJ"],
   "knowsAbout": [
     "Development economics", "International economics", "Income inequality",
     "Multidimensional poverty", "Energy transition", "Climate policy",
-    "Foreign direct investment", "Economic resilience"
+    "Foreign direct investment", "Economic resilience", "E-commerce"
   ],
   "alumniOf": [
     {"@type": "CollegeOrUniversity", "name": "Graduate Academy of Social Sciences"},
     {"@type": "CollegeOrUniversity", "name": "Leeds Metropolitan University"}
   ],
-  "affiliation": [
-    {"@type": "Organization", "name": "Vietnam Institute of Economics, Vietnam Academy of Social Sciences"},
-    {"@type": "CollegeOrUniversity", "name": "University of Economics and Business, Vietnam National University, Hanoi"}
+  "worksFor": [
+    {"@type": "CollegeOrUniversity", "name": "University of Economics and Business, Vietnam National University, Hanoi"},
+    {"@type": "Organization", "name": "Vietnam Institute of Economics, Vietnam Academy of Social Sciences"}
   ]
 }
 </script>
@@ -315,19 +399,31 @@ img{max-width:100%}
       <p class="eyebrow">Research profile · Updated September 2026</p>
       <button type="button" id="themebtn" class="themebtn" aria-label="Switch colour theme"><span id="themelabel">Dark</span></button>
     </div>
-    <h1>Trần Mai Trang</h1>
+    <div class="mast-grid">
+      <div class="mast-text">
+      <h1>Trần Mai Trang</h1>
     <p class="subtitle">Development and international economics — inequality, energy transition, and the resilience of the Vietnamese economy</p>
+    <p class="afflabel">Present</p>
     <ul class="affil">
-      <li><span class="since">2021–</span><span><strong>Principal Researcher</strong>, Vietnam Institute of Economics, Vietnam Academy of Social Sciences</span></li>
-      <li><span class="since">2025–</span><span><strong>Lecturer</strong>, University of Economics and Business, Vietnam National University, Hanoi</span></li>
-      <li><span class="since">2019–</span><span><strong>Lecturer</strong>, Graduate Academy of Social Sciences</span></li>
+      <li><span class="since">2025 –</span><span><strong>Lecturer</strong>, University of Economics and Business, Vietnam National University, Hanoi — currently teaching</span></li>
+      <li><span class="since">2021 –</span><span><strong>Principal Researcher</strong>, Vietnam Institute of Economics, Vietnam Academy of Social Sciences</span></li>
+      <li><span class="since">2019 –</span><span><strong>Lecturer</strong>, Graduate Academy of Social Sciences</span></li>
+    </ul>
+    <p class="afflabel">Previously</p>
+    <ul class="affil">
       <li><span class="since">2008–2019</span><span>Principal Researcher, Institute for African and Middle Eastern Studies</span></li>
     </ul>
     <div class="contact">
       <a href="mailto:tranmaitrang@vnu.edu.vn">tranmaitrang@vnu.edu.vn</a>
+      <a class="profilelink" href="https://scholar.google.com/citations?user=TDZL-CMAAAAJ" rel="me noopener" target="_blank">Google Scholar ↗</a>
       <a href="#index">Publications &amp; projects</a>
       <a href="#teaching">Teaching</a>
       <a href="#service">Service</a>
+      </div>
+      </div>
+      <figure class="portrait">
+        <img src="portrait.jpg" alt="Trần Mai Trang" width="172" height="214">
+      </figure>
     </div>
   </header>
 
@@ -339,7 +435,7 @@ img{max-width:100%}
     <div><dt>PhD, International Economics</dt><dd>2018</dd></div>
   </dl>
 
-  <section id="research">
+  <section id="research" class="reveal">
     <h2>Research themes</h2>
     <div class="themes">
       <div class="theme">
@@ -375,8 +471,37 @@ img{max-width:100%}
     </div>
   </section>
 
+
+  <section id="current" class="reveal">
+    <h2>Work in progress</h2>
+    <div class="current">
+      <div class="cur">
+        <span class="per">2024 – 2027</span>
+        <h3>Strengthening economic resilience</h3>
+        <p>National-level project on solutions for strengthening the resilience of the Vietnamese economy in the new context, combining an enterprise and cooperative survey with threshold and causal machine-learning estimation.</p>
+        <span class="who">KX.01.10/21-30 · Vietnam Institute of Economics · key member</span>
+      </div>
+      <div class="cur">
+        <span class="per">2026</span>
+        <h3>Digital economy in border provinces</h3>
+        <p>Analytical framework for digital infrastructure, digital government and the digital economy in mountainous border provinces, applied to Cao Bằng.</p>
+        <span class="who">Thuongmai University · participating researcher</span>
+      </div>
+      <div class="cur">
+        <span class="per">In preparation</span>
+        <h3>Generative AI and sustainable investment</h3>
+        <p>Survey-based study of how knowledge acquisition, AI ethics and perceived financial returns shape the intention to invest sustainably when generative AI supports the decision.</p>
+        <span class="who">Manuscript in preparation</span>
+      </div>
+    </div>
+  </section>
+
   <section id="index">
     <h2>Index of publications and projects</h2>
+    <div class="chartwrap">
+      <p class="chartlead">Research output per year · click a bar to filter</p>
+      <div class="chart" id="chart" role="group" aria-label="Research output per year"></div>
+    </div>
     <div class="toolbar">
       <div class="searchrow">
         <input id="q" type="search" placeholder="Search titles, journals, programmes…" aria-label="Search the index">
@@ -390,12 +515,16 @@ img{max-width:100%}
     <div class="records" id="records"></div>
   </section>
 
-  <section id="teaching">
+  <section id="teaching" class="reveal">
     <h2>Teaching</h2>
     <div class="two">
       <div>
+        <p class="afflabel" style="margin-top:0">Currently teaching — UEB, VNU Hanoi</p>
         <ul class="courses">
-          <li><span class="code">INE3104</span><span>E-commerce — University of Economics and Business, VNU</span></li>
+          <li><span class="code">INE3104</span><span><strong>E-commerce</strong> — 3 credits, undergraduate</span></li>
+        </ul>
+        <p class="afflabel">Also taught</p>
+        <ul class="courses">
           <li><span class="code">Graduate</span><span>International Economic Policy</span></li>
           <li><span class="code">Graduate</span><span>International Economics</span></li>
           <li><span class="code">Core</span><span>Macroeconomics</span></li>
@@ -403,28 +532,28 @@ img{max-width:100%}
         </ul>
       </div>
       <div class="note">
-        <h3>Current course design</h3>
-        <p>E-commerce (3 credits, ~50 students) runs as fifteen 150-minute sessions built around active-learning methods, with twelve student teams presenting. Every student finishes the course having written a full e-commerce plan for a specific product.</p>
+        <h3>How the E-commerce course runs</h3>
+        <p>Fifteen 150-minute sessions for around 50 students, built around active-learning methods, with twelve student teams presenting across the semester. Every student finishes the course having written a full e-commerce plan for a specific product.</p>
       </div>
     </div>
 
     <h3 style="font-size:1.05rem;margin:34px 0 0">Graduate supervision</h3>
     <div class="tablewrap">
       <table>
-        <thead><tr><th>Year</th><th>Candidate</th><th>Thesis</th><th>Degree</th></tr></thead>
+        <thead><tr><th>Year</th><th>Thesis topic</th><th>Degree</th></tr></thead>
         <tbody>
-          <tr><td>2025</td><td>Trần Đình Nuôi</td><td>Digital transformation policy for SMEs in Nghệ An province</td><td class="deg">PhD</td></tr>
-          <tr><td>2024</td><td>Trần Ngọc Oanh</td><td>Improving support policy for startup incubators in Đà Nẵng</td><td class="deg">Master's</td></tr>
-          <tr><td>2023</td><td>Đoàn Duy Thành</td><td>Investment attraction policy in Bắc Ninh province</td><td class="deg">Master's</td></tr>
-          <tr><td>2023</td><td>Nguyễn Hoài Nam</td><td>Agricultural development policy in Bắc Ninh province</td><td class="deg">Master's</td></tr>
-          <tr><td>2022</td><td>Nguyễn Phương Lan</td><td>New rural development policy in Krông Pắc district, Đắk Lắk</td><td class="deg">Master's</td></tr>
-          <tr><td>2021</td><td>Phan Thành Chinh</td><td>Financial autonomy policy in practice at An Giang Newspaper</td><td class="deg">Master's</td></tr>
+          <tr><td>2025</td><td>Digital transformation policy for SMEs in Nghệ An province</td><td class="deg">PhD</td></tr>
+          <tr><td>2024</td><td>Improving support policy for startup incubators in Đà Nẵng</td><td class="deg">Master's</td></tr>
+          <tr><td>2023</td><td>Investment attraction policy in Bắc Ninh province</td><td class="deg">Master's</td></tr>
+          <tr><td>2023</td><td>Agricultural development policy in Bắc Ninh province</td><td class="deg">Master's</td></tr>
+          <tr><td>2022</td><td>New rural development policy in Krông Pắc district, Đắk Lắk</td><td class="deg">Master's</td></tr>
+          <tr><td>2021</td><td>Financial autonomy policy in practice at An Giang Newspaper</td><td class="deg">Master's</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section id="service">
+  <section id="service" class="reveal">
     <h2>Service, editing &amp; education</h2>
     <div class="two">
       <div>
@@ -534,7 +663,7 @@ const PERIODS = [
 ];
 const KIND_LABEL = {article:"Journal article",conf:"Conference paper",book:"Book",led:"Project — lead",project:"Project"};
 
-let state = {kind:"all", period:"all", q:"", idxonly:false, desc:true};
+let state = {kind:"all", period:"all", q:"", idxonly:false, desc:true, year:null};
 
 function chipRow(el, items, keyName, current, onPick){
   el.innerHTML = "";
@@ -556,21 +685,30 @@ function render(){
   const kindsEl = document.getElementById("kinds");
   const periodsEl = document.getElementById("periods");
   chipRow(kindsEl, KINDS, "k", state.kind, k=>{state.kind=k;render();});
-  chipRow(periodsEl, PERIODS, "p", state.period, p=>{state.period=p;render();});
+  chipRow(periodsEl, PERIODS, "p", state.period, p=>{state.period=p;state.year=null;render();});
 
   const period = PERIODS.find(p=>p.p===state.period);
   const q = state.q.trim().toLowerCase();
   let rows = DATA.filter(d=>{
     if(state.kind!=="all" && d.kind!==state.kind) return false;
-    if(!period.test(d)) return false;
+    if(state.year !== null && d.y !== state.year) return false;
+    if(state.year === null && !period.test(d)) return false;
     if(state.idxonly && (!d.idx || d.idx.length===0)) return false;
     if(q && !(d.title+" "+d.venue+" "+d.role).toLowerCase().includes(q)) return false;
     return true;
   });
   rows.sort((a,b)=> state.desc ? b.y-a.y : a.y-b.y);
 
-  document.getElementById("count").textContent =
-    "Showing " + rows.length + " of " + DATA.length + " records";
+  var countEl = document.getElementById("count");
+  countEl.textContent = "Showing " + rows.length + " of " + DATA.length + " records";
+  if(state.year !== null){
+    countEl.textContent += " · year " + state.year;
+    var cb = document.createElement("button");
+    cb.className = "clearyear"; cb.type = "button"; cb.textContent = "clear";
+    cb.addEventListener("click", function(){ state.year = null; render(); });
+    countEl.appendChild(cb);
+  }
+  drawChart();
   document.getElementById("sort").textContent = state.desc ? "Newest first ↓" : "Oldest first ↑";
 
   const box = document.getElementById("records");
@@ -595,6 +733,55 @@ function render(){
 document.getElementById("q").addEventListener("input", e=>{state.q=e.target.value;render();});
 document.getElementById("idxonly").addEventListener("change", e=>{state.idxonly=e.target.checked;render();});
 document.getElementById("sort").addEventListener("click", ()=>{state.desc=!state.desc;render();});
+
+const PUB_KINDS = ["article","conf","book","led","project"];
+function drawChart(){
+  const el = document.getElementById("chart");
+  const years = {};
+  let min = 9999, max = 0;
+  DATA.forEach(d=>{
+    if(PUB_KINDS.indexOf(d.kind) === -1) return;
+    years[d.y] = (years[d.y]||0) + 1;
+    if(d.y < min) min = d.y;
+    if(d.y > max) max = d.y;
+  });
+  let peak = 0;
+  for(const y in years){ if(years[y] > peak) peak = years[y]; }
+  let html = "";
+  for(let y = min; y <= max; y++){
+    const n = years[y] || 0;
+    const h = n === 0 ? 2 : Math.round((n/peak)*100);
+    const on = state.year === y;
+    const label = (y % 5 === 0 || y === min || y === max) ? String(y) : "";
+    html += '<button class="bar" type="button" data-y="' + y + '" aria-pressed="' + on + '"' +
+            ' aria-label="' + y + ': ' + n + ' records">' +
+            '<b>' + n + '</b>' +
+            '<i style="height:' + h + '%"></i>' +
+            '<span>' + label + '</span></button>';
+  }
+  el.innerHTML = html;
+  el.querySelectorAll(".bar").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      const y = parseInt(b.getAttribute("data-y"), 10);
+      state.year = (state.year === y) ? null : y;
+      if(state.year !== null){ state.period = "all"; }
+      render();
+    });
+  });
+}
+
+(function(){
+  if(!("IntersectionObserver" in window)) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.body.classList.add("reveal-armed");
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, {rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+})();
+
 render();
 </script>
 
