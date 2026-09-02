@@ -350,6 +350,39 @@ td:first-child{font-family:"IBM Plex Mono",monospace;color:var(--faint);font-var
   .cur:first-child{padding-top:0;border-top:0}
 }
 
+/* ---------- collaboration ---------- */
+.collab{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+.invite{font-family:Spectral,Georgia,serif;font-size:1.24rem;line-height:1.45;margin:0 0 20px;color:var(--ink);max-width:38ch}
+.ways{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ways li{
+  display:flex;gap:12px;align-items:baseline;font-size:14.5px;
+  border-bottom:1px solid var(--line-soft);padding-bottom:10px;
+}
+.ways li:last-child{border-bottom:0}
+.ways .num{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);
+  flex:0 0 20px;
+}
+.reach{
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;
+  padding:22px;box-shadow:var(--shadow);
+}
+.reach dl{margin:0;display:grid;gap:12px}
+.reach dt{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--faint);
+}
+.reach dd{margin:2px 0 0;font-size:14.5px}
+.reach dd a{border-bottom-color:var(--accent-soft)}
+.qrcard{
+  margin-top:20px;padding-top:20px;border-top:1px solid var(--line-soft);
+  display:flex;gap:16px;align-items:center;
+}
+.qrcard svg{width:104px;height:104px;flex:0 0 auto;border:1px solid var(--line);border-radius:4px}
+.qrcard p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.qrcard code{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--accent-ink)}
+@media (max-width:760px){ .collab{grid-template-columns:1fr;gap:30px} }
+
 /* --- standalone additions --- */
 html{color-scheme:light dark}
 body{margin:0}
@@ -416,9 +449,12 @@ img{max-width:100%}
     <div class="contact">
       <a href="mailto:tranmaitrang@vnu.edu.vn">tranmaitrang@vnu.edu.vn</a>
       <a class="profilelink" href="https://scholar.google.com/citations?user=TDZL-CMAAAAJ" rel="me noopener" target="_blank">Google Scholar ↗</a>
+      <a class="profilelink" href="tel:+84912232367">+84 912 232 367</a>
+      <a class="profilelink" href="https://zalo.me/0912232367" rel="noopener" target="_blank">Zalo ↗</a>
       <a href="#index">Publications &amp; projects</a>
       <a href="#teaching">Teaching</a>
       <a href="#service">Service</a>
+      <a href="#collaborate">Collaboration</a>
       </div>
       </div>
       <figure class="portrait">
@@ -571,6 +607,34 @@ img{max-width:100%}
           <li><span class="code">2010</span><span>MSc, International Finance and Trade — Leeds Metropolitan University</span></li>
           <li><span class="code">2004</span><span>BA, International Trade (Management and Business) and BA, English</span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="collaborate" class="reveal">
+    <h2>Collaboration</h2>
+    <div class="collab">
+      <div>
+        <p class="invite">Open to new research partners — this space is kept for the work that has not started yet.</p>
+        <ul class="ways">
+          <li><span class="num">01</span><span>Joint empirical research and co-authored papers, particularly on economic resilience, energy transition and the digital economy</span></li>
+          <li><span class="num">02</span><span>Survey design and quantitative analysis for policy projects</span></li>
+          <li><span class="num">03</span><span>Commissioned studies and policy advice for ministries, provinces and development partners</span></li>
+          <li><span class="num">04</span><span>Guest lectures, doctoral supervision and research-methods training</span></li>
+          <li><span class="num">05</span><span>Peer review for journals and conference programme committees</span></li>
+        </ul>
+      </div>
+      <div class="reach">
+        <dl>
+          <div><dt>Email</dt><dd><a href="mailto:tranmaitrang@vnu.edu.vn">tranmaitrang@vnu.edu.vn</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+84912232367">+84 912 232 367</a></dd></div>
+          <div><dt>Zalo</dt><dd><a href="https://zalo.me/0912232367" rel="noopener" target="_blank">zalo.me/0912232367</a></dd></div>
+          <div><dt>Based in</dt><dd>Hanoi, Vietnam</dd></div>
+        </dl>
+        <div class="qrcard">
+          <svg class="qr" viewBox="0 0 33 33" shape-rendering="crispEdges" role="img" aria-label="QR code linking to tranmaitrang.github.io"><rect width="33" height="33" fill="#FBFBF7"/><path d="M2 2h7v1h-7zM14 2h2v1h-2zM18 2h4v1h-4zM24 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM16 3h4v1h-4zM21 3h2v1h-2zM24 3h1v1h-1zM30 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM15 4h2v1h-2zM18 4h1v1h-1zM21 4h1v1h-1zM24 4h1v1h-1zM26 4h3v1h-3zM30 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM11 5h1v1h-1zM14 5h4v1h-4zM20 5h2v1h-2zM24 5h1v1h-1zM26 5h3v1h-3zM30 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM10 6h2v1h-2zM13 6h1v1h-1zM16 6h1v1h-1zM21 6h1v1h-1zM24 6h1v1h-1zM26 6h3v1h-3zM30 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM11 7h1v1h-1zM15 7h1v1h-1zM19 7h3v1h-3zM24 7h1v1h-1zM30 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h7v1h-7zM11 9h3v1h-3zM15 9h2v1h-2zM18 9h2v1h-2zM22 9h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1zM11 10h2v1h-2zM16 10h2v1h-2zM19 10h1v1h-1zM21 10h2v1h-2zM26 10h1v1h-1zM29 10h1v1h-1zM3 11h5v1h-5zM9 11h1v1h-1zM12 11h3v1h-3zM16 11h2v1h-2zM23 11h2v1h-2zM27 11h1v1h-1zM30 11h1v1h-1zM3 12h8v1h-8zM15 12h1v1h-1zM20 12h1v1h-1zM23 12h1v1h-1zM28 12h3v1h-3zM2 13h1v1h-1zM5 13h1v1h-1zM10 13h2v1h-2zM17 13h1v1h-1zM19 13h1v1h-1zM22 13h1v1h-1zM26 13h1v1h-1zM29 13h1v1h-1zM3 14h3v1h-3zM8 14h2v1h-2zM11 14h4v1h-4zM18 14h2v1h-2zM22 14h3v1h-3zM27 14h1v1h-1zM29 14h2v1h-2zM3 15h2v1h-2zM6 15h1v1h-1zM10 15h2v1h-2zM15 15h1v1h-1zM17 15h4v1h-4zM22 15h3v1h-3zM27 15h1v1h-1zM30 15h1v1h-1zM2 16h1v1h-1zM5 16h1v1h-1zM7 16h2v1h-2zM10 16h3v1h-3zM16 16h3v1h-3zM22 16h1v1h-1zM24 16h4v1h-4zM29 16h2v1h-2zM2 17h1v1h-1zM5 17h1v1h-1zM7 17h1v1h-1zM13 17h1v1h-1zM15 17h2v1h-2zM18 17h3v1h-3zM22 17h1v1h-1zM25 17h1v1h-1zM27 17h1v1h-1zM29 17h1v1h-1zM2 18h1v1h-1zM4 18h2v1h-2zM8 18h3v1h-3zM13 18h2v1h-2zM16 18h2v1h-2zM19 18h1v1h-1zM21 18h4v1h-4zM27 18h1v1h-1zM29 18h2v1h-2zM4 19h1v1h-1zM6 19h1v1h-1zM10 19h3v1h-3zM16 19h2v1h-2zM19 19h1v1h-1zM22 19h3v1h-3zM27 19h2v1h-2zM30 19h1v1h-1zM2 20h1v1h-1zM5 20h6v1h-6zM13 20h1v1h-1zM15 20h1v1h-1zM19 20h2v1h-2zM29 20h2v1h-2zM3 21h3v1h-3zM7 21h1v1h-1zM11 21h2v1h-2zM14 21h1v1h-1zM17 21h1v1h-1zM19 21h1v1h-1zM21 21h1v1h-1zM25 21h1v1h-1zM27 21h1v1h-1zM29 21h1v1h-1zM2 22h1v1h-1zM6 22h1v1h-1zM8 22h2v1h-2zM13 22h2v1h-2zM18 22h3v1h-3zM22 22h5v1h-5zM10 23h1v1h-1zM12 23h1v1h-1zM15 23h1v1h-1zM17 23h2v1h-2zM21 23h2v1h-2zM26 23h1v1h-1zM28 23h3v1h-3zM2 24h7v1h-7zM11 24h1v1h-1zM13 24h1v1h-1zM16 24h4v1h-4zM21 24h2v1h-2zM24 24h1v1h-1zM26 24h2v1h-2zM29 24h2v1h-2zM2 25h1v1h-1zM8 25h1v1h-1zM12 25h2v1h-2zM15 25h2v1h-2zM18 25h2v1h-2zM22 25h1v1h-1zM26 25h2v1h-2zM29 25h2v1h-2zM2 26h1v1h-1zM4 26h3v1h-3zM8 26h1v1h-1zM10 26h2v1h-2zM14 26h1v1h-1zM16 26h4v1h-4zM22 26h5v1h-5zM29 26h1v1h-1zM2 27h1v1h-1zM4 27h3v1h-3zM8 27h1v1h-1zM11 27h1v1h-1zM14 27h4v1h-4zM21 27h2v1h-2zM26 27h1v1h-1zM28 27h1v1h-1zM2 28h1v1h-1zM4 28h3v1h-3zM8 28h1v1h-1zM10 28h2v1h-2zM14 28h2v1h-2zM20 28h1v1h-1zM22 28h2v1h-2zM25 28h3v1h-3zM30 28h1v1h-1zM2 29h1v1h-1zM8 29h1v1h-1zM13 29h2v1h-2zM18 29h3v1h-3zM22 29h1v1h-1zM25 29h1v1h-1zM29 29h1v1h-1zM2 30h7v1h-7zM10 30h1v1h-1zM12 30h3v1h-3zM16 30h4v1h-4zM21 30h2v1h-2zM24 30h4v1h-4zM29 30h2v1h-2z" fill="#191D1A"/></svg>
+          <p>Scan to open this profile<br><code>tranmaitrang.github.io</code></p>
+        </div>
       </div>
     </div>
     <p class="foot">Compiled from the author's academic record, May 2026. Roles are given as recorded on each publication: first author, corresponding author, sole author or co-author. Contact: <a href="mailto:tranmaitrang@vnu.edu.vn">tranmaitrang@vnu.edu.vn</a></p>
